@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+	
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: greenyellow;
+	color: #000;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+/*    background-color: #f9f9f9;*/
+    width: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	height: auto;
+}
+
+.dropdown-content .header {
+    background-color: green;
+    padding: 5px;
+    color: white;
+	
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    background-color: lightcyan;
+    height: auto;
+	right: 0px;
+}
+
+.column a {
+    float: none;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.column a:hover {
+    background-color: #fff;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+	
+	
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+	
+	.toggle {
+		background: url(menu1.png) no-repeat 95% center;
+		height: 50px;
+		cursor: pointer;	
+	}
+	.active {
+	  color: blue;
+	  display: inline-block;
+	  width: 100%;
+	  background-color: greenyellow;
+	}
+	nav{
+		display: none;
+	}
+}
+</style>
+</head>
+<body>
+	<div class="navbar">
+	<div class="toggle"></div>
+<nav>			
+  <a href="#home">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Schools 
+      <i class="fa fa-caret-square-o-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="header">
+        <h2>featured Schools</h2>
+      </div>   
+      <div class="row">
+        <div class="column">
+          <h3>Universities</h3>
+          <a href="#">UniCal</a>
+          <a href="#">UniUyo</a>
+          <a href="#">Unilag</a>
+		  <a href="#">UniPort</a>
+		  <a href="#">UniCal</a>
+          <a href="#">UniUyo</a>
+          <a href="#">Unilag</a>
+		  <a href="#">UniPort</a>
+        </div>
+        <div class="column">
+          <h3>Polytechnics</h3>
+          <a href="#">AIFPU</a>
+          <a href="#">Oko</a>
+          <a href="#">Nekede</a>
+		  <a href="#">AbiaPoly</a>
+		  <a href="#">AIFPU</a>
+          <a href="#">Oko</a>
+          <a href="#">Nekede</a>
+		  <a href="#">AbiaPoly</a>
+        </div>
+        <div class="column">
+          <h3>Colleges</h3>
+          <a href="#">Alvan</a>
+          <a href="#">Amadubelo</a>
+          <a href="#">Unek</a>
+		  <a href="#">Alvan</a>
+          <a href="#">Amadubelo</a>
+          <a href="#">Unek</a>
+		  <a href="#">Alvan</a>
+          <a href="#">Amadubelo</a>
+          <a href="#">Unek</a>
+		  <a href="#">Alvan</a>
+          <a href="#">Amadubelo</a>
+          <a href="#">Unek</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+	<a href="#news">News</a>
+	</nav>
+</div>
+<div style="padding:16px; position: relative">
+  <h3>Responsive Mega Menu (Full-width dropdown in navbar)</h3>
+  <p>Hover over the "Dropdown" link to see the mega menu.</p>
+  <p>Resize the browser window to see the responsive effect.</p>
+</div>
+	<script src="jquery-1.11.1.min.js"></script>
+	<script src="query.js"></script>
+</body>
+</html>
